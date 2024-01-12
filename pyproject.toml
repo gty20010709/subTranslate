@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "subtitletranslate"
+version = "0.1.0"
+description = ""
+authors = ["theocheng <zlz_gty@foxmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+srt = "^3.5.3"
+openai = "^1.7.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
