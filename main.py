@@ -40,7 +40,12 @@ def main():
     for index, sub in enumerate(subs):
         context = "\n".join([ss.content for ss in subs[index - 2 : index + 3]])
         target: str = sub.content
-        print(get_transalte(target=target, context=context).strip("。"))
+        result = get_transalte(target=target, context=context).strip("。")
+        print(result)
+        subs[index].content = result
+
+    with open(sub_file.split(".")[0] + ".out.srt", "w") as f:
+        f.write(srt.compose(subs))
 
 
 if __name__ == "__main__":
